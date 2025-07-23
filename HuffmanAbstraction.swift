@@ -1,9 +1,9 @@
 
 import Foundation
 
-struct HuffmanCompressor {
+public struct HuffmanCompressor {
     
-    static func compress(inputFilePath: String, outputCompressedPath: String) throws {
+    public static func compress(inputFilePath: String, outputCompressedPath: String) throws {
         let inputData = try Data(contentsOf: URL(fileURLWithPath: inputFilePath))
         print("Input file size: (\(inputData.count) bytes)")
         
@@ -21,7 +21,7 @@ struct HuffmanCompressor {
         
     }
     
-    static func decompress(compressedFilePath: String, outputFilePath: String) throws {
+    public static func decompress(compressedFilePath: String, outputFilePath: String) throws {
         let compressedData = try Data(contentsOf: URL(fileURLWithPath: compressedFilePath))
         print("Compressed file size: (\(compressedData.count) bytes)")
         
